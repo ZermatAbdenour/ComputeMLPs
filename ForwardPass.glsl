@@ -1,7 +1,7 @@
 #version 430
 
-layout(local_size_x = 10) in;  // Single workgroup with 10 threads
-shared float hidden[10];       // Shared memory for hidden layer
+layout(local_size_x = 10) in;  
+shared float hidden[10];      
 
 layout(std430, binding=0) buffer InputBuffer { float input_data[]; };
 layout(std430, binding=1) buffer W1Buffer { float w1[]; };
